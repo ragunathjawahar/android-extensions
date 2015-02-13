@@ -27,7 +27,7 @@ Intent intent = new Intent(this, SuperPowersActivity.class);
 
 **Kotlin**
 ````kotlin
-val intent = intent<SuperPowersActivity>()
+val intent = getIntent<SuperPowersActivity>()
 ````
 Layout Inflation
 -------------------------
