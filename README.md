@@ -19,6 +19,16 @@ val flags = flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
 startActivity<SuperPowersActivity>(flags)
 ````
 
+<h4>Example: Create an Intent</h4>
+**Java**
+````java
+Intent intent = new Intent(this, SuperPowersActivity.class);
+````
+
+**Kotlin**
+````kotlin
+val intent = intent<SuperPowersActivity>()
+````
 Layout Inflation
 -------------------------
 **Java**
@@ -135,6 +145,29 @@ Typeface sourceSansPro = Typeface.createFromAsset(assetManager, "fonts/source-sa
 **Kotlin**
 ````kotlin
 val sourceSansPro = typefaceFromAssets("fonts/source-sans-pro.ttf")
+````
+
+Views
+-------------------------
+<h4>Example: Listeners</h4>
+**Java**
+````java
+view.setOnClickListener(new Button.OnClickListener() {
+        public void onClick(View v)
+            {
+                //perform action
+            }
+         });
+````
+
+**Kotlin**
+````kotlin
+myView?.setOnClickListener { /* code here */ }
+myView?.setOnClickListener { view -> /* code here with view: View? argument */ }
+val onClickListener = OnClickListener { view -> /* code here */ }
+
+myView?.setOnTouchListener { view, event -> false /* with view: View? and event: MotionEvent? */ }
+val onTouchListener = OnTouchListener { view, event -> false }
 ````
 
 More...

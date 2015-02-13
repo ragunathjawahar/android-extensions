@@ -83,7 +83,7 @@ inline public fun <reified T: Service> Context.startService(extras: Bundle, flag
 }
 
 inline public fun <reified T: Context> Context.getIntent(): Intent {
-    return Intent(this, javaClass<T>())
+    return Intent(this, javaClass<K>())
 }
 
 inline public fun <reified T: Context> Context.getIntent(flags: Int): Intent {

@@ -14,8 +14,7 @@ public fun Context.inflateLayout(layoutResId: Int, parent: ViewGroup): View {
     return inflateLayout(layoutResId, parent, true)
 }
 
-public fun Context.inflateLayout(
-        layoutResId: Int, parent: ViewGroup, attachToRoot: Boolean): View {
+public fun Context.inflateLayout(layoutResId: Int, parent: ViewGroup, attachToRoot: Boolean): View {
     return inflateView(this, layoutResId, parent, attachToRoot)
 }
 
@@ -24,7 +23,6 @@ public fun Context.inflateLayout(
  *  Private methods
  * -----------------------------------------------------------------------------
  */
-private fun inflateView(context: Context, layoutResId: Int,
-        parent: ViewGroup?, attachToRoot: Boolean): View {
+private fun inflateView(context: Context, layoutResId: Int, parent: ViewGroup?, attachToRoot: Boolean): View {
     return LayoutInflater.from(context).inflate(layoutResId, parent, attachToRoot)
 }
