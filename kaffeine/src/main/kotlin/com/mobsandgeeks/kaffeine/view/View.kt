@@ -21,3 +21,13 @@ import android.view.View
 inline fun <reified T : View> View.find(id: Int): T = this.findViewById(id) as T
 
 inline fun <reified T : View> Activity.find(id: Int): T = this.findViewById(id) as T
+
+fun View.onClick(action: () -> Unit) = setOnClickListener { action() }
+
+fun View.beVisible(): Unit { setVisibility(View.VISIBLE) }
+
+fun View.beGone(): Unit { setVisibility(View.GONE) }
+
+fun View.beInvisible(): Unit { setVisibility(View.INVISIBLE) }
+
+fun View.beVisibleIf(condition: Boolean): Unit = if(condition) beVisible() else beGone()

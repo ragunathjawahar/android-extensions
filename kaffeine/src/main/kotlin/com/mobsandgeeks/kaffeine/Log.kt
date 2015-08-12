@@ -88,3 +88,8 @@ public fun Any.e(tag: String, message: String, exception: Exception?) {
 public fun Any.wtf(tag: String, message: String, exception: Exception?) {
     Log.wtf(tag, message, exception)
 }
+
+public fun <T> T.d(tag: String = "", message: String): T {
+    Log.d(tag, message)
+    return this
+}
